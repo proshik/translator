@@ -7,6 +7,8 @@ import (
 	"github.com/pkg/errors"
 )
 
+const defaultBaseURL = "https://dictionary.yandex.net/api/v1/dicservice.json/"
+
 //Translate response from Yandex dictionary
 type WordResponse struct {
 	Head Head  `json:"head"`
@@ -58,8 +60,6 @@ type Dictionary struct {
 	client *Client
 	token  string
 }
-
-const defaultBaseURL = "https://dictionary.yandex.net/api/v1/dicservice.json/"
 
 func NewDictionary(token string) *Dictionary {
 	return &Dictionary{

@@ -11,9 +11,9 @@ type Client struct {
 }
 
 func NewClient(baseURL string) *Client {
-	url, err := url.Parse(baseURL)
+	u, err := url.Parse(baseURL)
 	if err != nil {
 		panic(err)
 	}
-	return &Client{url, http.DefaultClient}
+	return &Client{u, http.DefaultClient}
 }
