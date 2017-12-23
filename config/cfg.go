@@ -7,7 +7,6 @@ const (
 	SERVICENAME = "TRANSLATOR"
 )
 
-
 type Config struct {
 	LogDir                string `default:"/"`
 	YandexDictionaryToken string `required:"true"`

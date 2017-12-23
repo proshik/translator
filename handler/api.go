@@ -10,6 +10,7 @@ import (
 	"errors"
 )
 
+//LangDirection describe a direction of translate(en-ru, ru-en, etc)
 type LangDirection struct {
 	LangFrom string
 	LangTo   string
