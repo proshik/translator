@@ -1,13 +1,13 @@
 package handler
 
 import (
-	"github.com/proshik/translator/yandex"
-	"net/http"
-	"strings"
-	"fmt"
-	"log"
 	"encoding/json"
 	"errors"
+	"fmt"
+	"github.com/proshik/translator/yandex"
+	"log"
+	"net/http"
+	"strings"
 )
 
 //LangDirection describe a direction of translate(en-ru, ru-en, etc)

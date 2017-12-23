@@ -1,8 +1,8 @@
 package yandex
 
 import (
-	"testing"
 	"github.com/pkg/errors"
+	"testing"
 )
 
 var err = ExternalError{errors.New("error message"), UNEXPECTED_ERROR}

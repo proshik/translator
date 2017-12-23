@@ -3,8 +3,8 @@ package yandex
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"github.com/pkg/errors"
+	"net/http"
 )
 
 const defaultBaseURL = "https://dictionary.yandex.net/api/v1/dicservice.json/"

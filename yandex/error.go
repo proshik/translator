@@ -5,7 +5,7 @@ import "fmt"
 type Code int
 
 const (
-	OK                       Code  = iota
+	OK Code = iota
 	KEY_INVALID
 	KEY_BLOCKED
 	DAILY_REQ_LIMIT_EXCEEDED

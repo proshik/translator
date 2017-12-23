@@ -1,10 +1,10 @@
 package yandex
 
 import (
-	"testing"
-	"net/http"
 	"fmt"
+	"net/http"
 	"net/http/httptest"
+	"testing"
 )
 
 const baseURLPath = "/translate"

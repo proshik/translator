@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net/http"
-	"log"
 	"github.com/go-chi/chi"
 	"github.com/proshik/translator/config"
-	"github.com/proshik/translator/yandex"
 	"github.com/proshik/translator/handler"
+	"github.com/proshik/translator/yandex"
+	"log"
+	"net/http"
 )
 
 func main() {
