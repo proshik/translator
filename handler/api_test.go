@@ -1,16 +1,16 @@
 package handler
 
 import (
-	"testing"
-	"net/http/httptest"
-	"net/http"
-	"github.com/proshik/translator/yandex"
 	"encoding/json"
+	"github.com/proshik/translator/yandex"
+	"net/http"
+	"net/http/httptest"
+	"testing"
 )
 
 type DictionaryMock struct {
 	response *yandex.WordResponse
-	error *yandex.ExternalError
+	error    *yandex.ExternalError
 }
 
 func (dm *DictionaryMock) Translate(text, langFrom, langTo string) (*yandex.WordResponse, *yandex.ExternalError) {
