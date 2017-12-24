@@ -23,7 +23,9 @@ func main() {
 	r.Route("/translate", func(r chi.Router) {
 		r.Get("/word", h.Word)
 
-		r.Post("/text", h.Text)
+		r.Post("/text", func(w http.ResponseWriter, r *http.Request) {
+			w.WriteHeader(http.StatusNotImplemented)
+		})
 	})
 
 	log.Println("Api is waiting for requests...")

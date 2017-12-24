@@ -56,12 +56,16 @@ type ErrorResponse struct {
 	Message string `json:"message"`
 }
 
+type DictionaryTranslator interface {
+	Translate(text, langFrom, langTo string) (*WordResponse, *ExternalError)
+}
+
 type Dictionary struct {
 	client *Client
 	token  string
 }
 
-func NewDictionary(token string) *Dictionary {
+func NewDictionary(token string) DictionaryTranslator {
 	return &Dictionary{
 		NewClient(defaultBaseURL),
 		token,

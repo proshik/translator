@@ -17,10 +17,10 @@ type LangDirection struct {
 }
 
 type Handler struct {
-	dictionary *yandex.Dictionary
+	dictionary yandex.DictionaryTranslator
 }
 
-func NewHandler(dict *yandex.Dictionary) *Handler {
+func NewHandler(dict yandex.DictionaryTranslator) *Handler {
 	return &Handler{dict}
 }
 
@@ -58,10 +58,6 @@ func (handler *Handler) Word(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Internal server error", http.StatusInternalServerError)
 		return
 	}
-}
-
-func (handler *Handler) Text(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotImplemented)
 }
 
 func extractLangDirection(lang string) (*LangDirection, error) {
