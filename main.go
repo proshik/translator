@@ -30,5 +30,5 @@ func main() {
 
 	log.Println("Api is waiting for requests...")
 
-	http.ListenAndServe(":8080", r)
+	http.ListenAndServe(":"+string(cfg.Port), r)
 }
