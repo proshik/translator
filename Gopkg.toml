@@ -32,3 +32,8 @@
 [[constraint]]
   name = "github.com/pkg/errors"
   version = "0.8.0"
+
+[metadata.heroku]
+  root-package = "github.com/proshik/translator"
+  go-version = "1.10.1"
+  install = [ "./..." ]

@@ -13,7 +13,7 @@ CREATE TABLE "word" (
   "value"        TEXT NOT NULL,
   "lang_from"    TEXT NOT NULL,
   "lang_to"      TEXT NOT NULL,
-  "translate"    JSON NOT NULL
+  "translate"    JSONВ NOT NULL
 );
 
 END TRANSACTION;
