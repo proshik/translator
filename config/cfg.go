@@ -8,7 +8,7 @@ const (
 )
 
 type Config struct {
-	Port                  string `default:"8080"`
+	Port                  string `envconfig:"PORT",default:"8080"`
 	LogDir                string `default:"/"`
 	YandexDictionaryToken string `required:"true"`
 	YandexTranslatorToken string `required:"false"`
